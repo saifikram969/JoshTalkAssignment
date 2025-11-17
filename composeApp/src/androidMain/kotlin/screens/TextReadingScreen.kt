@@ -9,7 +9,9 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.PlayArrow
@@ -53,9 +55,15 @@ fun TextReadingScreen(navController: NavController) {
 
     LaunchedEffect(Unit) { vm.fetchText() }
 
+    val scrollState = rememberScrollState()
+
     Column(
-        modifier = Modifier.fillMaxSize().padding(16.dp)
-    ) {
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(scrollState)
+            .padding(16.dp)
+    )
+    {
 
         BackTopBar(
             title = "Text Reading Task",

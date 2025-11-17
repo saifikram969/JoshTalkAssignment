@@ -28,7 +28,7 @@ fun TaskSelectionScreen(navController: NavController) {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
+        Spacer(modifier = Modifier.height(40.dp))
         Text(
             "Choose a task to begin",
             fontSize = 22.sp,

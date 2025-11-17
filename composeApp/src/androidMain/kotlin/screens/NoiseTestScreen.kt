@@ -43,6 +43,7 @@ fun NoiseTestScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
+        Spacer(modifier = Modifier.height(40.dp))
         Text("Sample Task", fontSize = 22.sp, fontWeight = FontWeight.Bold)
         Spacer(Modifier.height(20.dp))
 
